@@ -1,0 +1,103 @@
+<template>
+    <!-- 订单列表的整体布局信息 -->
+    <view class="viewport">
+        <!-- tabs数据图标栏 -->
+        <view class="tabs">
+            <text class="item" v-for="(item, index) in orderTabs" :key="item.title" @tap="activeIndex = index">
+                {{ item.title }}
+            </text>
+            <!-- 游标：选中某个栏目底下的提示线 -->
+            <view class="cursor" :style="{ left: activeIndex * 20 + '%' }"></view>
+        </view>
+        <!-- 滑动容器展示各个栏目的订单数据 -->
+        <swiper class="swiper" :current="activeIndex" @change="onChange">
+            <!-- 滑动项 -->
+            <swiper-item v-for="(item, idx) in orderTabs" :key="item.title">
+                <!-- 订单列表内容 -->
+                <OrderList v-if="loaded[idx]" :order-state="item.orderState" />
+            </swiper-item>
+        </swiper>
+    </view>
+</template>
+
+<script setup lang="ts">
+import { ref, watch } from 'vue'
+import OrderList from './components/orderList.vue';
+// tabs 数据
+const orderTabs = ref([
+    { orderState: 0, title: '全部' },
+    { orderState: 1, title: '待付款' },
+    { orderState: 2, title: '待发货' },
+    { orderState: 3, title: '待收货' },
+    { orderState: 4, title: '待评价' },
+])
+// 获取页面参数
+const query = defineProps<{
+    type: string
+}>()
+// 定义高亮下标
+// const activeIndex = ref(orderTabs.value.findIndex((item) => item.orderState === Number(query.type)))
+
+// 计算初始激活下标，防止找不到时为 -1
+const initial = orderTabs.value.findIndex(i => i.orderState === Number(query.type))
+const activeIndex = ref(initial >= 0 ? initial : 0)
+// 懒加载标记：只有被激活过的页才会渲染/请求
+const loaded = ref(orderTabs.value.map((_, i) => i === activeIndex.value))
+const onChange = (e: any) => {
+    activeIndex.value = e.detail.current
+}
+watch(activeIndex, (i) => {
+    loaded.value[i] = true
+})
+</script>
+
+<style lang="scss">
+page {
+    height: 100%;
+    overflow: hidden;
+}
+
+.viewport {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+// tabs
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    line-height: 60rpx;
+    margin: 0 10rpx;
+    background-color: #fff;
+    box-shadow: 0 4rpx 6rpx rgba(240, 240, 240, 0.6);
+    position: relative;
+    z-index: 9;
+
+    .item {
+        flex: 1;
+        text-align: center;
+        padding: 20rpx;
+        font-size: 28rpx;
+        color: #262626;
+    }
+
+    .cursor {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 20%;
+        height: 6rpx;
+        padding: 0 50rpx;
+        background-color: #27ba9b;
+        /* 过渡效果 */
+        transition: all 0.4s;
+    }
+}
+
+// swiper
+.swiper {
+    background-color: #f7f7f8;
+}
+</style>

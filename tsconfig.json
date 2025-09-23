@@ -1,0 +1,95 @@
+// {
+//   "extends": "@vue/tsconfig/tsconfig.json",
+//   "compilerOptions": {
+//     "allowJs": true,
+//     "sourceMap": true,
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": [
+//         "./src/*"
+//       ]
+//     },
+//     "lib": [
+//       "esnext",
+//       "dom"
+//     ],
+//     "types": [
+//       "vite/client",
+//       "@dcloudio/types",
+//       "miniprogram-api-typings",
+//       "@uni-helper/uni-types"
+//     ]
+//   },
+//   "vueCompilerOptions": {
+//     // experimentalRuntimeMode 已废弃，现调整为 nativeTags，请升级 Volar 插件至最新版本
+//     "plugins": [
+//       "@uni-helper/uni-types/volar-plugin"
+//     ],
+//     "nativeTags": [
+//       "block",
+//       "component",
+//       "template",
+//       "slot"
+//     ]
+//   },
+//   "include": [
+//     "src/**/*.ts",
+//     "src/**/*.d.ts",
+//     "src/**/*.tsx",
+//     "src/**/*.vue",
+//     "*.d.ts"
+//   ]
+// }
+// "compilerOptions": {
+//   "verbatimModuleSyntax": false,
+//   "module": "ESNext",
+//   "moduleResolution": "Node",
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "allowJs": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    // 取代 importsNotUsedAsValues / preserveValueImports
+    "verbatimModuleSyntax": true,
+    // Vite/uni-app 场景通常用 bundler；Node ESM 用 node16/nodenext
+    "moduleResolution": "bundler",
+    // 建议用官方大小写
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "vite/client",
+      "@dcloudio/types",
+      "miniprogram-api-typings",
+      "@uni-helper/uni-types"
+    ]
+    // 仅为临时静音弃用提示（不是删除项）时可加： "ignoreDeprecations": "6.0"
+  },
+  "vueCompilerOptions": {
+    "plugins": [
+      "@uni-helper/uni-types/volar-plugin"
+    ],
+    "nativeTags": [
+      "block",
+      "component",
+      "template",
+      "slot"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "*.d.ts"
+  ]
+}
