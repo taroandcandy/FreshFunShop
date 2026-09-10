@@ -1,180 +1,161 @@
+<!--
+此文件为开发者工具生成，生成时间: 2025/9/23下午3:25:04
+使用方法：
+在 D:\front\Project\xiaotuxian\FreshFunShop\dist\dev\mp-weixin\pages\category\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 D:\front\Project\xiaotuxian\FreshFunShop\dist\dev\mp-weixin\pages\category\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
 <template name="skeleton">
   <view class="sk-container">
     <view class="viewport viewport">
       <view class="search search">
         <view class="input input">
-          <text
-            class="icon-search sk-transparent sk-text-14-2857-860 sk-text sk-pseudo sk-pseudo-circle"
-            >请输入搜索内容</text
-          >
+          <text class="icon-search sk-transparent sk-text-14-2857-504 sk-text sk-pseudo sk-pseudo-circle">请输入搜索内容</text>
         </view>
       </view>
       <view class="categories categories">
         <scroll-view :scroll-y="true" class="primary primary">
           <view class="item active sk-pseudo sk-pseudo-circle">
-            <text class="name sk-transparent sk-text-14-2857-824 sk-text">居家</text>
+            <text class="name sk-transparent sk-text-14-2857-429 sk-text">居家</text>
           </view>
           <view class="item sk-pseudo sk-pseudo-circle">
-            <text class="name sk-transparent sk-text-14-2857-215 sk-text">美食</text>
+            <text class="name sk-transparent sk-text-14-2857-680 sk-text">美食</text>
           </view>
           <view class="item sk-pseudo sk-pseudo-circle">
-            <text class="name sk-transparent sk-text-14-2857-19 sk-text">服饰</text>
+            <text class="name sk-transparent sk-text-14-2857-45 sk-text">服饰</text>
           </view>
           <view class="item sk-pseudo sk-pseudo-circle">
-            <text class="name sk-transparent sk-text-14-2857-455 sk-text">母婴</text>
+            <text class="name sk-transparent sk-text-14-2857-852 sk-text">母婴</text>
           </view>
           <view class="item sk-pseudo sk-pseudo-circle">
-            <text class="name sk-transparent sk-text-14-2857-179 sk-text">个护</text>
+            <text class="name sk-transparent sk-text-14-2857-445 sk-text">个护</text>
           </view>
           <view class="item sk-pseudo sk-pseudo-circle">
-            <text class="name sk-transparent sk-text-14-2857-641 sk-text">严选</text>
+            <text class="name sk-transparent sk-text-14-2857-4 sk-text">严选</text>
           </view>
           <view class="item sk-pseudo sk-pseudo-circle">
-            <text class="name sk-transparent sk-text-14-2857-643 sk-text">数码</text>
+            <text class="name sk-transparent sk-text-14-2857-267 sk-text">数码</text>
           </view>
           <view class="item sk-pseudo sk-pseudo-circle">
-            <text class="name sk-transparent sk-text-14-2857-473 sk-text">运动</text>
+            <text class="name sk-transparent sk-text-14-2857-531 sk-text">运动</text>
           </view>
           <view class="item sk-pseudo sk-pseudo-circle">
-            <text class="name sk-transparent sk-text-14-2857-330 sk-text">杂项</text>
+            <text class="name sk-transparent sk-text-14-2857-234 sk-text">杂项</text>
           </view>
         </scroll-view>
         <scroll-view :scroll-y="true" class="secondary secondary">
-          <view is="components/XtxSwiper" class="banner banner">
-            <view class="carousel XtxSwiper--carousel">
-              <swiper :circular="true" :interval="3000" :current="0" :autoplay="false">
+          <view is="components/XqpSwiper" class="banner banner">
+            <view class="carousel XqpSwiper--carousel">
+              <swiper :circular="true" class="swiper XqpSwiper--swiper" :interval="3000" :current="0" :autoplay="false">
                 <swiper-item
-                  style="
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    transform: translate(0%, 0px) translateZ(0px);
-                  "
-                >
-                  <navigator class="navigator XtxSwiper--navigator" hover-class="none">
-                    <image class="image XtxSwiper--image sk-image" mode="aspectFill"></image>
+                  style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+                  <navigator class="navigator XqpSwiper--navigator" hover-class="none">
+                    <image class="image XqpSwiper--image sk-image" mode="aspectFill"></image>
                   </navigator>
                 </swiper-item>
                 <swiper-item
-                  style="
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    transform: translate(100%, 0px) translateZ(0px);
-                  "
-                >
-                  <navigator class="navigator XtxSwiper--navigator" hover-class="none">
-                    <image class="image XtxSwiper--image sk-image" mode="aspectFill"></image>
+                  style="position: absolute; width: 100%; height: 100%; transform: translate(100%, 0px) translateZ(0px);">
+                  <navigator class="navigator XqpSwiper--navigator" hover-class="none">
+                    <image class="image XqpSwiper--image sk-image" mode="aspectFill"></image>
                   </navigator>
                 </swiper-item>
               </swiper>
-              <view class="indicator XtxSwiper--indicator">
-                <text class="dot XtxSwiper--dot active XtxSwiper--active"></text>
-                <text class="dot XtxSwiper--dot"></text>
-                <text class="dot XtxSwiper--dot"></text>
-                <text class="dot XtxSwiper--dot"></text>
-                <text class="dot XtxSwiper--dot"></text>
+              <view class="indicator XqpSwiper--indicator">
+                <text class="dot XqpSwiper--dot active XqpSwiper--active"></text>
+                <text class="dot XqpSwiper--dot"></text>
+                <text class="dot XqpSwiper--dot"></text>
+                <text class="dot XqpSwiper--dot"></text>
+                <text class="dot XqpSwiper--dot"></text>
               </view>
             </view>
           </view>
           <view class="panel panel">
             <view class="title title">
-              <text class="name sk-transparent sk-text-26-6667-586 sk-text">居家生活用品</text>
-              <navigator
-                class="more sk-transparent sk-text-30-0000-245 sk-text sk-pseudo sk-pseudo-circle"
-                hover-class="none"
-                >全部</navigator
-              >
+              <text class="name sk-transparent sk-text-27-4194-813 sk-text">茶咖酒具</text>
+              <navigator class="more sk-transparent sk-text-30-6452-789 sk-text sk-pseudo sk-pseudo-circle"
+                hover-class="none">全部</navigator>
             </view>
             <view class="section section">
               <navigator class="goods goods" hover-class="none">
                 <image class="image sk-image"></image>
-                <view class="name ellipsis sk-transparent sk-text-14-2857-456 sk-text"
-                  >梅乃宿梅酒720毫升</view
-                >
+                <view class="name ellipsis sk-transparent sk-text-14-2857-151 sk-text">魔术盒快客杯旅行盖碗茶具套装</view>
                 <view class="price price">
                   <text class="symbol sk-transparent sk-opacity">¥</text>
-                  <text class="number sk-transparent sk-text-14-2857-330 sk-text">168.00</text>
+                  <text class="number sk-transparent sk-text-14-2857-977 sk-text">148.00</text>
                 </view>
               </navigator>
               <navigator class="goods goods" hover-class="none">
                 <image class="image sk-image"></image>
-                <view class="name ellipsis sk-transparent sk-text-14-2857-260 sk-text"
-                  >法国年份雅文邑700毫升</view
-                >
+                <view class="name ellipsis sk-transparent sk-text-14-2857-605 sk-text">日式黑陶茶具枯山水茶具礼盒装</view>
                 <view class="price price">
                   <text class="symbol sk-transparent sk-opacity">¥</text>
-                  <text class="number sk-transparent sk-text-14-2857-64 sk-text">1480.00</text>
+                  <text class="number sk-transparent sk-text-14-2857-276 sk-text">218.00</text>
                 </view>
               </navigator>
               <navigator class="goods goods" hover-class="none">
                 <image class="image sk-image"></image>
-                <view class="name ellipsis sk-transparent sk-text-14-2857-507 sk-text"
-                  >多米尼加陈年朗姆酒700毫升</view
-                >
+                <view class="name ellipsis sk-transparent sk-text-14-2857-912 sk-text">日式黑陶功夫茶组双侧把茶具礼盒装</view>
                 <view class="price price">
                   <text class="symbol sk-transparent sk-opacity">¥</text>
-                  <text class="number sk-transparent sk-text-14-2857-918 sk-text">238.00</text>
+                  <text class="number sk-transparent sk-text-14-2857-324 sk-text">288.00</text>
                 </view>
               </navigator>
               <navigator class="goods goods" hover-class="none">
                 <image class="image sk-image"></image>
-                <view class="name ellipsis sk-transparent sk-text-14-2857-239 sk-text"
-                  >全新升级，四川酸辣粉195克*6杯</view
-                >
+                <view class="name ellipsis sk-transparent sk-text-14-2857-339 sk-text">古法温酒汝瓷酒具套装白酒杯莲花温酒器</view>
                 <view class="price price">
                   <text class="symbol sk-transparent sk-opacity">¥</text>
-                  <text class="number sk-transparent sk-text-14-2857-20 sk-text">69.00</text>
+                  <text class="number sk-transparent sk-text-14-2857-370 sk-text">488.00</text>
                 </view>
               </navigator>
               <navigator class="goods goods" hover-class="none">
                 <image class="image sk-image"></image>
-                <view class="name ellipsis sk-transparent sk-text-14-2857-706 sk-text"
-                  >川味牛肉辣椒酱190克</view
-                >
+                <view class="name ellipsis sk-transparent sk-text-14-2857-944 sk-text">大师监制龙泉青瓷茶叶罐</view>
                 <view class="price price">
                   <text class="symbol sk-transparent sk-opacity">¥</text>
-                  <text class="number sk-transparent sk-text-14-2857-37 sk-text">38.00</text>
+                  <text class="number sk-transparent sk-text-14-2857-241 sk-text">139.00</text>
                 </view>
               </navigator>
               <navigator class="goods goods" hover-class="none">
                 <image class="image sk-image"></image>
-                <view class="name ellipsis sk-transparent sk-text-14-2857-281 sk-text"
-                  >极光限定 珠光蓝珐琅锅</view
-                >
+                <view class="name ellipsis sk-transparent sk-text-14-2857-14 sk-text">手握黄金比例意大利进口红酒杯2支装</view>
                 <view class="price price">
                   <text class="symbol sk-transparent sk-opacity">¥</text>
-                  <text class="number sk-transparent sk-text-14-2857-415 sk-text">199.00</text>
+                  <text class="number sk-transparent sk-text-14-2857-416 sk-text">79.00</text>
                 </view>
               </navigator>
               <navigator class="goods goods" hover-class="none">
                 <image class="image sk-image"></image>
-                <view class="name ellipsis sk-transparent sk-text-14-2857-206 sk-text"
-                  >智利老牌名庄，梅洛干红750毫升</view
-                >
+                <view class="name ellipsis sk-transparent sk-text-14-2857-502 sk-text">竹制干泡茶盘正方形沥水茶台品茶盘</view>
                 <view class="price price">
                   <text class="symbol sk-transparent sk-opacity">¥</text>
-                  <text class="number sk-transparent sk-text-14-2857-300 sk-text">98.00</text>
+                  <text class="number sk-transparent sk-text-14-2857-753 sk-text">109.00</text>
                 </view>
               </navigator>
               <navigator class="goods goods" hover-class="none">
                 <image class="image sk-image"></image>
-                <view class="name ellipsis sk-transparent sk-text-14-2857-356 sk-text"
-                  >钻石陶瓷涂层多用锅18cm 小奶锅</view
-                >
+                <view class="name ellipsis sk-transparent sk-text-14-2857-922 sk-text">智能温控细嘴流速刚刚好咖啡手冲壶电热水壶</view>
                 <view class="price price">
                   <text class="symbol sk-transparent sk-opacity">¥</text>
-                  <text class="number sk-transparent sk-text-14-2857-959 sk-text">149.00</text>
+                  <text class="number sk-transparent sk-text-14-2857-912 sk-text">389.00</text>
                 </view>
               </navigator>
               <navigator class="goods goods" hover-class="none">
                 <image class="image sk-image"></image>
-                <view class="name ellipsis sk-transparent sk-text-14-2857-143 sk-text"
-                  >黄金玉粟粥米500克</view
-                >
+                <view class="name ellipsis sk-transparent sk-text-14-2857-727 sk-text">称心如意手摇咖啡磨豆机咖啡豆研磨机</view>
                 <view class="price price">
                   <text class="symbol sk-transparent sk-opacity">¥</text>
-                  <text class="number sk-transparent sk-text-14-2857-803 sk-text">9.90</text>
+                  <text class="number sk-transparent sk-text-14-2857-416 sk-text">289.00</text>
                 </view>
               </navigator>
               <navigator class="goods goods" hover-class="none">
@@ -187,336 +168,3 @@
     </view>
   </view>
 </template>
-
-<style>
-.sk-transparent {
-  color: transparent !important;
-}
-.sk-text-14-2857-860 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 39.2rpx;
-  position: relative !important;
-}
-.sk-text {
-  background-origin: content-box !important;
-  background-clip: content-box !important;
-  background-color: transparent !important;
-  color: transparent !important;
-  background-repeat: repeat-y !important;
-}
-.sk-text-14-2857-824 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-215 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-19 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-455 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-179 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-641 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-643 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-473 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-330 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-26-6667-586 {
-  background-image: linear-gradient(
-    transparent 26.6667%,
-    #eeeeee 0%,
-    #eeeeee 73.3333%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 60rpx;
-  position: relative !important;
-}
-.sk-text-30-0000-245 {
-  background-image: linear-gradient(
-    transparent 30%,
-    #eeeeee 0%,
-    #eeeeee 70%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 60rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-456 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 30.8rpx;
-  position: relative !important;
-}
-.sk-opacity {
-  opacity: 0 !important;
-}
-.sk-text-14-2857-260 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 30.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-64 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-507 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 30.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-918 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-239 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 30.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-20 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-706 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 30.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-37 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-281 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 30.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-415 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-206 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 30.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-300 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-356 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 30.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-959 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-143 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 30.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-803 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
-  position: relative !important;
-}
-.sk-image {
-  background: #efefef !important;
-}
-.sk-pseudo::before,
-.sk-pseudo::after {
-  background: #efefef !important;
-  background-image: none !important;
-  color: transparent !important;
-  border-color: transparent !important;
-}
-.sk-pseudo-rect::before,
-.sk-pseudo-rect::after {
-  border-radius: 0 !important;
-}
-.sk-pseudo-circle::before,
-.sk-pseudo-circle::after {
-  border-radius: 50% !important;
-}
-.sk-container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: transparent;
-}
-</style>

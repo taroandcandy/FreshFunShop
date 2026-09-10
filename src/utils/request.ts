@@ -12,8 +12,8 @@ TODO：
 
 import { useMemberStore } from "@/stores";
 // 接口容易出问题
-// const baseURL = 'https://pcapi-xiaotuxian-front-devtest.itheima.net/'
-const baseURL = 'https://apipc-xiaotuxian-front.itheima.net'
+const baseURL = 'https://pcapi-xiaotuxian-front-devtest.itheima.net/'
+// const baseURL = 'https://apipc-xiaotuxian-front.itheima.net'
 
 
 
